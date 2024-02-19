@@ -2,6 +2,7 @@
 	background: linear-gradient(90deg, #C7C5F4, #776BCC);	
 } */
 .header {
+	margin-top: -10px;
 	overflow: hidden;
 	background-color: #f1f1f1;
 	padding: 10px 10px;
@@ -37,13 +38,3 @@
 	float: right;
   }
   
-  /* @media screen and (max-width: 500px) {
-	.header a {
-	  float: none;
-	  display: block;
-	  text-align: left;
-	}
-	.header-right {
-	  float: none;
-	}
-  } */

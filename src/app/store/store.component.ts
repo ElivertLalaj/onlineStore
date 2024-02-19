@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class StoreComponent {
 
+  // price: number = 12
+
+  constructor() {}
+
   showWomenClothes = false;
   showMenClothes = false
+
 
   onClickWomenClothes(){
   this.showMenClothes = false
@@ -25,4 +30,11 @@ export class StoreComponent {
 
 
   }
+
+
+  save(){}
+
+  byNow(){}
+
+
 }

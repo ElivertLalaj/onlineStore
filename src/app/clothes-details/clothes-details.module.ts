@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClothesDetailsComponent } from './clothes-details.component';
 import { Routes, RouterModule } from '@angular/router';
-import { StoreComponent } from './store.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 
 const routes: Routes = [
-  {path:"Eltistore" , component: StoreComponent }
+  {path:"Details" , component: ClothesDetailsComponent }
 ];
 
 
 @NgModule({
   declarations: [
-    StoreComponent
+    ClothesDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -21,4 +21,4 @@ const routes: Routes = [
     MatButtonModule
   ]
 })
-export class StoreModule { }
+export class ClothesDetailsModule { }

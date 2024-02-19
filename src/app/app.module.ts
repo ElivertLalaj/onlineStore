@@ -29,15 +29,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-// import { StoreComponent } from './store/store.component';
 import { StoreModule } from './store/store.module';
+import { ClothesDetailsModule } from './clothes-details/clothes-details.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-
+      
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,8 @@ import { StoreModule } from './store/store.module';
     MatIconModule,MatToolbarModule,MatSliderModule,MatSlideToggleModule,MatTabsModule,MatExpansionModule,
     MatProgressSpinnerModule,MatProgressBarModule,MatDialogModule,MatSnackBarModule,MatTableModule,
     MatPaginatorModule,MatSortModule,
-    StoreModule
+    StoreModule,
+    ClothesDetailsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

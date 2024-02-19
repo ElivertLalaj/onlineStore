@@ -1,95 +1,205 @@
+<div class="content">
+  <img src="assets/home.jpg" alt="" class="img" />
+</div>
 
-
-
-    <div class="content"></div>
-    
-
-         
 <div class="row">
-    <mat-card class="card1" (click)="onClickWomenClothes()">
-        <mat-card-header>women</mat-card-header>
-    
-    </mat-card>
-    <mat-card class="card2" (click)="onClickMenClothes()">
-        <mat-card-header>men</mat-card-header>
-    </mat-card>
+  <mat-card class="card1" (click)="onClickWomenClothes()">
+    <img src="assets/women/women.jpg" alt="" class="menWomen" />
+  </mat-card>
+
+  <mat-card class="card2" (click)="onClickMenClothes()">
+    <img src="assets/men/men.jpg" alt="" class="menWomen" />
+  </mat-card>
 </div>
 <div class="container" *ngIf="showWomenClothes">
-<div class="row">
+  <div class="row">
     <div class="col-md-3">
+      <mat-card class="card" id="w1">
+        <img src="assets/women/wwww.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 49.19$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
 
-    <mat-card class="card" id="w1">
-        <!-- <img src="assets/womenFashion.jpg" alt="" style="background-color: red;"> -->
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w2">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-     <mat-card class="card" id="w3">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w4">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w5">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w6">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w7">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w8">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w9">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-    <mat-card class="card" id="w10">
-        <mat-card-header>women</mat-card-header>
-    </mat-card>
-</div>
-</div>
-</div>
+      <mat-card class="card" id="w2">
+        <img src="assets/women/women1.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 59.99$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
 
+      <mat-card class="card" id="w3">
+        <img src="assets/women/women2.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 39.59$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
 
+      <mat-card class="card" id="w4">
+        <img src="assets/women/women3.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 42.59$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="w5">
+        <img src="assets/women/women4.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 93.19$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="w6">
+        <img src="assets/women/women5.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 32.12$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="w7">
+        <img src="assets/women/women6.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 31.99$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="w8">
+        <img src="assets/women/women7.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 12.42$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="w9">
+        <img src="assets/women/women8.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 52.24$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
 
 <div class="container" *ngIf="showMenClothes">
-    <div class="row">
-        <div class="col-md-3">
-        <mat-card class="card" id="m1">
-            <mat-card-header>men</mat-card-header>
-        
-        </mat-card>
-        <mat-card class="card"id="m2">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-         <mat-card class="card" id="m3">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m4">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m5">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m6">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m7">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m8">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m9">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
-        <mat-card class="card" id="m10">
-            <mat-card-header>men</mat-card-header>
-        </mat-card>
+  <div class="row">
+    <div class="col-md-3">
+      <mat-card class="card" id="m1">
+        <img src="assets/men/men1.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 69.49$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m2">
+        <img src="assets/men/men2.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 49.29$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m3">
+        <img src="assets/men/men3.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 86.79$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m4">
+        <img src="assets/men/men4.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 97.79$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m5">
+        <img src="assets/men/men5.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 39.49$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m6">
+        <img src="assets/men/men6.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 92.34$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m7">
+        <img src="assets/men/men7.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 54.59$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m8">
+        <img src="assets/men/men8.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 56.59$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
+
+      <mat-card class="card" id="m9">
+        <img src="assets/men/men9.jpg" alt="" class="img1" />
+        <div class="cart-details">
+          <p>Price: 67.69$</p>
+          <span class="fa fa-star"></span>
+          <button mat-button class="btn">Add to Cart</button>
+          <button mat-button class="btn">Buy now</button>
+        </div>
+      </mat-card>
     </div>
-    </div>
+  </div>
 </div>
 
