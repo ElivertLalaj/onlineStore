@@ -10,43 +10,29 @@
 
 </mat-card>
 <mat-card class="card">
-    
 
-<select class="product-variants" id="producu-size" style="display: none;">
-    <option value="XS">XS</option>
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L">L</option>
-    <option value="XL">XL</option>
-    <option value="XXL">XXL</option>
-    
-    
-    </select>
+    <h2>Kapele</h2><br>
+    <mat-label>Chose color</mat-label>
+    <mat-select>
+        <mat-option value="valid">white</mat-option>
+        <mat-option value="valid">Black</mat-option>
+        <mat-option value="valid">Green</mat-option>
+      </mat-select>
 
-    <li tabindex="0" data-text="XS" class="active">
-        <span>XS</span>
-    </li>
-    
-    <li tabindex="0" data-text="S" class="active">
-        <span>S</span>
-    </li>
-    
-    <li tabindex="0" data-text="M" class="active">
-        <span>M</span>
-    </li>
-    
-    <li tabindex="0" data-text="L" class="active">
-        <span>L</span>
-    </li>
-    
-    <li tabindex="0" data-text="XL" class="active">
-        <span>XL</span>
-    </li>
-    
-    <li tabindex="0" data-text="XXL" class="active">
-        <span>XXL</span>
-    </li>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">XS</mat-radio-button>
+        <mat-radio-button value="2">S</mat-radio-button>
+        <mat-radio-button value="3">M</mat-radio-button>
+        <mat-radio-button value="4">L</mat-radio-button>
+        <mat-radio-button value="5">XL</mat-radio-button>
+        <mat-radio-button value="6">XXL</mat-radio-button>
 
+
+      </mat-radio-group>
+<div class="content">
+      <input type="number"  class="num">
+      <button type="button" class="btn">ADD TO CART</button>
+    </div>
 </mat-card>
 </div>
 </div>

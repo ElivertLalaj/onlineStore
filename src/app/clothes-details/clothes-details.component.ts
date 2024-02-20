@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 
 
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./clothes-details.component.css']
 })
 export class ClothesDetailsComponent {
+
+  
+
 
 }
