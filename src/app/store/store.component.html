@@ -14,8 +14,10 @@
 <div class="container" *ngIf="showWomenClothes">
   <div class="row">
     <div class="col-md-3">
-      <mat-card class="card" id="w1">
-        <img src="assets/women/wwww.jpg" alt="" class="img1" />
+      <mat-card class="card" id="w1" *ngFor="let item of category">
+        <img src="{{item.image}}" alt="" class="img1" />
+
+        <!-- <img src="assets/women/wwww.jpg" alt="" class="img1" /> -->
         <div class="cart-details">
           <p>Price: 49.19$</p>
           <span class="fa fa-star"></span>
@@ -23,7 +25,7 @@
           <button mat-button class="btn">Buy now</button>
         </div>
       </mat-card>
-
+<!-- 
       <mat-card class="card" id="w2">
         <img src="assets/women/women1.jpg" alt="" class="img1" />
         <div class="cart-details">
@@ -71,10 +73,10 @@
           <span class="fa fa-star"></span>
           <button mat-button class="btn">Add to Cart</button>
           <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
+        </div> -->
+      <!-- </mat-card> -->
 
-      <mat-card class="card" id="w7">
+      <!-- <mat-card class="card" id="w7">
         <img src="assets/women/women6.jpg" alt="" class="img1" />
         <div class="cart-details">
           <p>Price: 31.99$</p>
@@ -102,7 +104,7 @@
           <button mat-button class="btn">Add to Cart</button>
           <button mat-button class="btn">Buy now</button>
         </div>
-      </mat-card>
+      </mat-card> -->
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Category } from '../models/store';
 
 @Component({
   selector: 'app-store',
@@ -7,12 +8,16 @@ import { Component } from '@angular/core';
 })
 export class StoreComponent {
 
-  // price: number = 12
+
+
+  category: Category[] = []
 
   constructor() {}
 
   showWomenClothes = false;
   showMenClothes = false
+
+
 
 
   onClickWomenClothes(){
