@@ -1,0 +1,64 @@
+img {
+  width: 300x;
+  height: 200px;
+}
+
+.card-container {
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #5c4242;
+  box-shadow: 1px 3px 15px #7645d8;
+}
+
+.card {
+  width: calc(25% - 20px);
+  margin: 0 10px 20px;
+  margin-top: 10px;
+  box-shadow: 1px 3px 15px #7645d8;
+  border-radius: 8px;
+}
+
+button {
+  width: 25%;
+  margin-left: 112px;
+  margin-bottom: 7px;
+}
+
+#btn1 {
+  margin-top: 15px;
+  margin-left: 75%;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.number-input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+  margin-left: 180px;
+  margin-top: -25px;
+}
+
+.number-input-row button {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.number-input-row input[type="number"] {
+  width: 35px;
+  text-align: center;
+  border: none;
+}
+
+.button-row {
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 5px;
+}

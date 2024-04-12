@@ -1,0 +1,16 @@
+<form [formGroup]="categoryForm" (submit)="saveClicked()" enctype="multipart/form-data">
+  <div class="input-group input-group-lg">
+    <input type="text" class="form-control" formControlName="name" placeholder="name">
+  </div>
+  <div class="input-group input-group-lg">
+    <input type="text" class="form-control" formControlName="description" placeholder="description">
+  </div>
+  <div class="input-group input-group-lg">
+    <input type="file" (change)="handleFileInput($event)" class="form-control form-control-lg" formControlName="image" id="formFileLg" accept=".jpg">
+    
+  </div>
+  
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Save</button>
+  </div>
+</form>

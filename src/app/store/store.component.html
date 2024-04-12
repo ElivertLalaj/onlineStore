@@ -1,207 +1,222 @@
+<form [formGroup]="form">
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasEnd"
+    aria-labelledby="offcanvasEndLabel"
+    *ngIf="isOffcanvasOpen"
+  >
+    <div class="sideCard">
+      <h2 formControlName="description">{{ selectedItem.description }}</h2>
+      <br />
+      <label>Choose color</label>
+      <select
+        class="form-select form-select-lg mb-2"
+        aria-label="Large select example"
+        formControlName="color"
+      >
+        <option value="white">white</option>
+        <option value="black">black</option>
+        <option value="blue">blue</option>
+        <option value="grey">grey</option>
+      </select>
+      <label>Choose size</label>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeXS"
+              value="XS"
+              formControlName="size"
+            />
+            <label class="form-check-label" for="sizeXS"></label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeS"
+              value="S"
+              formControlName="size"
+            />
+            <label class="form-check-label" for="sizeS"></label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeM"
+              value="M"
+              formControlName="size"
+            />
+            <label class="form-check-label" for="sizeM"></label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeL"
+              value="L"
+              formControlName="size"
+              style="top: 35px; left: -5px"
+            />
+            <label class="form-check-label" for="sizeL"></label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeXL"
+              value="XL"
+              formControlName="size"
+            />
+            <label class="form-check-label" for="sizeXXL"></label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size"
+              id="sizeXXL"
+              value="XXL"
+              formControlName="size"
+            />
+            <label class="form-check-label" for="sizeXXL"></label>
+          </div>
+        </div>
+      </div>
+
+      <label>QUANTITY</label>
+
+      <div class="number-input-row">
+        <button (click)="decrement()">-</button>
+        <input
+          id="size"
+          type="number"
+          formControlName="number"
+          min="0"
+          value="1"
+        />
+        <button (click)="increment()">+</button>
+      </div>
+
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        (click)="Save()"
+        id="button"
+      >
+        Save to Cart
+      </button>
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        (click)="Buy()"
+        id="button1"
+      >
+        Buy Now
+      </button>
+    </div>
+  </div>
+</form>
+
 <div class="content">
-  <img src="assets/home.jpg" alt="" class="img" />
+  <img src="assets/elStore.jpg" alt="" class="img" />
 </div>
 
-<div class="row">
-  <mat-card class="card1" (click)="onClickWomenClothes()">
-    <img src="assets/women/women.jpg" alt="" class="menWomen" />
-  </mat-card>
+<div class="store">
+  <div class="container">
+    <div
+      *ngFor="let item of category; let i = index"
+      [ngStyle]="{ 'background-image': 'url(' + item.image + ')' }"
+      [ngClass]="{ active: i === 0 }"
+    >
+      <div class="content">
+        <a
+          *ngIf="item.id === 225"
+          (click)="onClickWomenClothes()"
+          class="button"
+          >Women Collection</a
+        >
+        <a *ngIf="item.id === 224" (click)="onClickMenClothes()" class="button"
+          >Men Collection</a
+        >
+        <a
+          *ngIf="item.id === 352"
+          (click)="onClickChildClothes()"
+          class="button"
+          >Child Collection</a
+        >
+        <h4>VIEW COLLECTION</h4>
+      </div>
+    </div>
+  </div>
 
-  <mat-card class="card2" (click)="onClickMenClothes()">
-    <img src="assets/men/men.jpg" alt="" class="menWomen" />
-  </mat-card>
-</div>
-<div class="container" *ngIf="showWomenClothes">
-  <div class="row">
-    <div class="col-md-3">
-      <mat-card class="card" id="w1" *ngFor="let item of category">
-        <img src="{{item.image}}" alt="" class="img1" />
-
-        <!-- <img src="assets/women/wwww.jpg" alt="" class="img1" /> -->
-        <div class="cart-details">
-          <p>Price: 49.19$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-<!-- 
-      <mat-card class="card" id="w2">
-        <img src="assets/women/women1.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 59.99$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w3">
-        <img src="assets/women/women2.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 39.59$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w4">
-        <img src="assets/women/women3.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 42.59$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w5">
-        <img src="assets/women/women4.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 93.19$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w6">
-        <img src="assets/women/women5.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 32.12$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div> -->
-      <!-- </mat-card> -->
-
-      <!-- <mat-card class="card" id="w7">
-        <img src="assets/women/women6.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 31.99$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w8">
-        <img src="assets/women/women7.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 12.42$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="w9">
-        <img src="assets/women/women8.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 52.24$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card> -->
+  <div class="storee">
+    <div
+      class="container-row"
+      *ngIf="showWomenClothes || showMenClothes || showChildClothes"
+    >
+      <ng-container *ngFor="let item of product">
+        <mat-card
+          class="card"
+          [id]="
+            item.category_id === 225
+              ? 'w1'
+              : item.category_id === 224
+              ? 'm1'
+              : 'c1'
+          "
+          *ngIf="
+            (showWomenClothes && item.category_id === 225) ||
+            (showMenClothes && item.category_id === 224) ||
+            (showChildClothes && item.category_id === 223)
+          "
+          [ngStyle]="{
+            'background-image': 'url(' + item.image + ')',
+            'background-size': 'cover',
+            'background-position': 'center',
+            'box-shadow': '1px 3px 15px #7645d8'
+          }"
+        >
+          <div class="product">
+            <div class="product-details">
+              <h3>
+                {{ item.description }}
+                <hr />
+                PRICE : {{ item.price }}$
+              </h3>
+              <button
+                id="DetailsButton"
+                class="btn btn-outline-secondary"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasEnd"
+                aria-controls="offcanvasEnd"
+                (click)="openOffcanvas(item)"
+              >
+                DETAILS ⇢
+              </button>
+            </div>
+          </div>
+        </mat-card>
+      </ng-container>
     </div>
   </div>
 </div>
-
-<div class="container" *ngIf="showMenClothes">
-  <div class="row">
-    <div class="col-md-3">
-      <mat-card class="card" id="m1">
-        <img src="assets/men/men1.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 69.49$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m2">
-        <img src="assets/men/men2.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 49.29$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m3">
-        <img src="assets/men/men3.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 86.79$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m4">
-        <img src="assets/men/men4.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 97.79$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m5">
-        <img src="assets/men/men5.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 39.49$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m6">
-        <img src="assets/men/men6.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 92.34$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m7">
-        <img src="assets/men/men7.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 54.59$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m8">
-        <img src="assets/men/men8.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 56.59$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-
-      <mat-card class="card" id="m9">
-        <img src="assets/men/men9.jpg" alt="" class="img1" />
-        <div class="cart-details">
-          <p>Price: 67.69$</p>
-          <span class="fa fa-star"></span>
-          <button mat-button class="btn">Add to Cart</button>
-          <button mat-button class="btn">Buy now</button>
-        </div>
-      </mat-card>
-    </div>
-  </div>
-</div>
-

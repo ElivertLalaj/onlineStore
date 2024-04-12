@@ -1,0 +1,77 @@
+<div class="topnav">
+    <a class="active" href="#home"  *ngIf="roles.SUPER_ADMIN" >User</a>
+    <a href="#news" *ngIf="roles.SUPER_ADMIN || roles.ADMIN ">Employe</a>
+    <a href="#contact">Admin</a>
+    <a href="#about"></a>
+</div>
+
+
+    <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">options</th>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">description</th>
+            <th scope="col">image</th>
+            <th scope="col">createdAt</th>
+            <th >
+              <button class="btn btn-primary" (click)="addCategory()">Add new Category</button>
+            </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of category;">
+            <td>
+            <button (click)="deleteCategoryButtonClicked(item.id)" id="button" class="col mb-2">delete</button>
+          </td>
+            <td class="col mb-10">{{item.id}}</td>
+            <td class="col mb-10">{{item.name}}</td>
+            <td class="col mb-10">{{item.description}}</td>
+            <td class="col mb-10">
+              <img [src]="item.image" /></td>
+            <td class="col mb-10">{{item.createdAt}}</td>
+           <td>
+
+           </td>
+          </tr>
+         
+        </tbody>
+      </table>
+      <hr>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">options</th>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">description</th>
+            <th scope="col">stock</th>
+            <th scope="col">image</th>
+            <th scope="col">price</th>
+            <th >
+              <button class="btn btn-primary" (click)="addProduct()">Add new Product</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of product;">
+            <td>
+              <button (click)="deleteProductButtonClicked(item.id)" id="button" class="col mb-2">delete</button>
+            </td>
+         
+            <td class="col mb-10">{{item.id}}</td>
+            <td class="col mb-10">{{item.name}}</td>
+            <td class="col mb-10">{{item.description}}</td>
+            <td class="col mb-10">{{item.stock}}</td>
+            <td><img [src]="item.image" /></td>
+    
+            <td class="col mb-10">{{item.price}}$</td>
+           <td></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+

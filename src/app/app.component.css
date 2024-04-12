@@ -37,4 +37,60 @@
 	float: right;
 
   }
+
+  .logo{
+	margin-top: 10px;
+  }
   
+  #offcanvasExample{
+	background-color: #fff;
+	width: 250px;
+	position: fixed;
+	padding: 16px;
+	z-index: 9999 !important;
+	transition: all 0.5s ease;
+	
+  
+
+  }
+
+
+  .sidebar{
+	margin-top: 20px;
+	color: rgb(0, 0, 0);
+  }
+
+  a{
+	text-decoration: none;
+	font-weight: 900;font-stretch: ultra-expanded;
+
+  }
+
+
+.notification {
+	
+	text-decoration: none;
+	padding: 5px 6px;
+	position: relative;
+	display: inline-block;
+	border-radius: 2px;
+  }
+  
+  .notification:hover {
+	background: red;
+  }
+  
+  .notification .badge {
+	position: absolute;
+	top: -4px;
+    right: -21px;
+	padding: 5px 10px;
+	border-radius: 50%;
+	background: red;
+	color: white;
+  }
+
+
+  a{
+	padding: 5px 6px;
+  }

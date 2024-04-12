@@ -1,0 +1,28 @@
+<form [formGroup]="productForm" (submit)="saveProductClicked()" enctype="multipart/form-data">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" formControlName="name" placeholder="name">
+    </div>
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" formControlName="description" placeholder="description">
+    </div>
+    <div class="input-group input-group-lg">
+        <input type="number" class="form-control" formControlName="stock" placeholder="stock">
+      </div>
+    <div class="input-group input-group-lg">
+      <input type="file" (change)="handleFileInput($event)" class="form-control form-control-lg" formControlName="image" id="formFileLg" accept=".jpg">
+    </div>
+    <div class="input-group input-group-lg">
+        <input type="number" class="form-control" formControlName="price" placeholder="price">
+      </div>
+      <div class="input-group input-group-lg">
+        <select class="form-control" formControlName="category_id" (change)="onCategoryChange()">
+          <option value="223">Child Category</option>
+          <option value="224">Men Category</option>
+          <option value="225">Women Category</option>
+        </select>
+      </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Save</button>
+    </div>
+  </form>
+  

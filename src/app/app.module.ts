@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from './store/store.module';
-import { ClothesDetailsModule } from './clothes-details/clothes-details.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AddStoreModule } from './store/add-store/add-store.module';
 import { AuthGuard } from './login/AuthGuard';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { CartModule } from './cart/cart.module';
 
 
 @NgModule({
@@ -23,13 +23,10 @@ import { AuthGuard } from './login/AuthGuard';
     AppRoutingModule,
     BrowserAnimationsModule,
     StoreModule,
-    ClothesDetailsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AddStoreModule,
-
-  
-
+    DashboardModule, 
+    CartModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
